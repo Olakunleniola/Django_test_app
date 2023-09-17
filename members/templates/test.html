@@ -1,0 +1,13 @@
+{% extends 'master.html'%}
+
+    
+{% block content%}
+    <div class="mycard">
+        <h1>Display the Test Fruits </h1>
+        <ul>
+            {%for kay in fruits%}
+                <li>{{kay}}</li>
+            {%endfor%}
+        </ul>
+    </div>
+{%endblock%}

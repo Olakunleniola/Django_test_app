@@ -1,0 +1,22 @@
+
+{% extends  "master.html"%}
+
+
+{% block title %}
+    List of my Children
+{% endblock%}
+
+
+
+{% block content %} 
+
+    <div class="mycard">
+        <h1>My Children</h1>
+        <ul>
+            {% for omo in omomi %}
+                <li onclick = 'window.location ="details/{{ omo.lastname }}"'>{{omo.firstname}} {{omo.lastname}}</li>
+            {%endfor%}
+        </ul>
+    </div>
+
+{% endblock %}

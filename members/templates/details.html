@@ -1,0 +1,27 @@
+{%extends "master.html"%}
+
+
+{%block title%}
+    Detail About {{omo.firstname}} {{omo.lastname}}
+{%endblock%}
+My Children Detail View</title>
+
+
+{%block content%}
+    <div class="mycard">
+        <h1>CHILD DETAILS</h1>
+    
+        <h3><b>Name :</b> {{omo.firstname}} {{omo.lastname}}</h3>
+        <h4><b>Date of Birth :</b> {{omo.joined_date}}</h4>
+        <h4><b>Phone Number :</b> {{omo.phone_number}}</h4>
+        <h4><b>Child Position :</b> {% if omo.id == 1 %}1ST Born
+                                        {% elif omo.id == 2 %} 2ND Born 
+                                        {% elif omo.id == 3 %} 3RD Born 
+                                        {% else %} {{omo.id}}TH Born
+                                    {% endif %}</h4>
+        <p><a href="/mychildren">&larr; Back to Children List </a></p>
+    </div
+
+{%endblock%}
+
+
